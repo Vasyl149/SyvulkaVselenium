@@ -9,8 +9,6 @@ import page.common.Header;
 import page_bo.LoginPageBO;
 import page_bo.MainMenuBO;
 
-import java.io.IOException;
-
 import static config.ConfManager.conf;
 
 public abstract class BaseTest {
@@ -33,7 +31,7 @@ public abstract class BaseTest {
     }
 
     @AfterClass
-    public void postCondition() throws IOException {
+    public void postCondition() {
         Header header = new Header();
         header.controlButton();
         header.logoutButton();
