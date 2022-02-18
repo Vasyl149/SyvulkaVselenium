@@ -2,14 +2,14 @@ import driver.BrowserInstance;
 import driver.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import page.common.Header;
-import page.common.MainMenuList;
 import page_bo.LoginPageBO;
 import page_bo.MainMenuBO;
 
-import java.io.*;
-import java.time.Duration;
+import java.io.IOException;
 
 import static config.ConfManager.conf;
 
