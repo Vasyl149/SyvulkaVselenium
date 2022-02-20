@@ -1,12 +1,5 @@
-import org.checkerframework.checker.units.qual.A;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.common.MainMenuList;
-import page.main.*;
-import page_bo.EmailComposePageBO;
 import page_bo.MainMenuBO;
-
-import static config.ConfManager.conf;
 
 
 public class MailTest extends BaseTest {
@@ -16,7 +9,6 @@ public class MailTest extends BaseTest {
     public void newMailWithoutRecipientTest() throws InterruptedException {
         int draftsNumber = new MainMenuBO().getDraftsNumber();
         System.out.println(draftsNumber);
-
         new MainMenuBO().openComposePage().
                 createNewMail().
                 verifyStyleEditingElements().
@@ -28,21 +20,25 @@ public class MailTest extends BaseTest {
 
         new MainMenuBO().verifyDraftsNumber(newDraftsNumber, draftsNumber);
 
-
-    }
-
-
-    @Test(dependsOnMethods = "newMailWithoutRecipientTest")
-    public void sendDraftTest() throws InterruptedException {
         new MainMenuBO().draftButton().
                 verifySendDraft();
-    }
 
-
-    @Test(dependsOnMethods = "sendDraftTest")
-    public void sentItems() {
         new MainMenuBO().sentButton().
-                verifySentEmail();
+                verifySentMail();
     }
+
+
+//    @Test(dependsOnMethods = "newMailWithoutRecipientTest")
+//    public void sendDraftTest() throws InterruptedException {
+//        new MainMenuBO().draftButton().
+//                verifySendDraft();
+//    }
+//
+//
+//    @Test(dependsOnMethods = "sendDraftTest")
+//    public void sentItems() {
+//        new MainMenuBO().sentButton().
+//                verifySentMail();
+//    }
 
 }

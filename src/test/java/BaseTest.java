@@ -1,19 +1,18 @@
 import driver.BrowserInstance;
 import driver.DriverManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import page.common.Header;
-import page_bo.LoginPageBO;
+import page_bo.loginPageBO.LoginPageBO;
 import page_bo.MainMenuBO;
 
 import static config.ConfManager.conf;
 
 public abstract class BaseTest {
-
-    @BeforeClass
+    protected static final Logger logger = Logger.getLogger(MainMenuBO.class);
+    @BeforeMethod
     @Parameters("browser")
     public void preCondition(String browser) {
         WebDriver driver = new BrowserInstance().createInstance(browser);
@@ -30,11 +29,8 @@ public abstract class BaseTest {
         Assert.assertTrue(mainMenuBO.getComposeButton());
     }
 
-    @AfterClass
+    @AfterMethod
     public void postCondition() {
-        Header header = new Header();
-        header.controlButton();
-        header.logoutButton();
         DriverManager.quit();
     }
 

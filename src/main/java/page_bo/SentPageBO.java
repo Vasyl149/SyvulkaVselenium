@@ -8,7 +8,8 @@ import static config.ConfManager.conf;
 public class SentPageBO extends MainMenuBO {
     SentItemsPage sentItemsPage = new SentItemsPage();
 
-    public void verifySentEmail() {
+    public void verifySentMail() {
+        logger.info("Verify sent mail");
         Assert.assertTrue(sentItemsPage.getSentItemEmail().equals(conf().testemail()));
     }
 }
