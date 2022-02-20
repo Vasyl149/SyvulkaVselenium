@@ -42,13 +42,14 @@ public class MainMenuBO extends GeneralBO {
         return this;
     }
 
-    public MainMenuBO verifyNavigationMenu(){
+    public MainMenuBO verifyNavigationMenu() throws InterruptedException {
         // Check if menu list contains 8 items
         logger.info("Check if menu list contains 8 items");
         Assert.assertEquals(mainMenuList.menuList2().size(), 8);
         // Check if menu consist of  'Вхідні', 'Чернетки', 'Надіслані', 'Спам' etc.
         logger.info("Check if menu consist of  'Inbox', 'Drafts', 'Sent', 'Spam' etc.");
         List<String> menuListNames = new ArrayList<>();
+        Thread.sleep(3000);
         mainMenuList.menuList2().forEach(el -> menuListNames.add(el.getText()));
         Reader reader = new Reader();
         Assert.assertTrue(reader.readFile().equals(menuListNames));
