@@ -49,9 +49,10 @@ public class MainMenuBO extends GeneralBO {
         // Check if menu consist of  'Вхідні', 'Чернетки', 'Надіслані', 'Спам' etc.
         logger.info("Check if menu consist of  'Inbox', 'Drafts', 'Sent', 'Spam' etc.");
         List<String> menuListNames = new ArrayList<>();
-        Thread.sleep(3000);
+
         mainMenuList.menuList2().forEach(el -> menuListNames.add(el.getText()));
         Reader reader = new Reader();
+        Thread.sleep(5000);
         Assert.assertTrue(reader.readFile().equals(menuListNames));
         //
         logger.info("Check if icons are displayed on left menu");
