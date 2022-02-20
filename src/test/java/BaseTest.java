@@ -16,7 +16,7 @@ public abstract class BaseTest {
     private  final String browser = System.getProperty("environment");
     @BeforeMethod
  //     @Parameters("browser")
-    public void preCondition(String browser) {
+    public void preCondition() {
         WebDriver driver = new BrowserInstance().createInstance(browser);
         DriverManager.setDriver(driver);
 
