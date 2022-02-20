@@ -34,10 +34,10 @@
                         <!--suppress UnresolvedMavenProperty -->
                         <environment>${env}</environment>
                     </systemPropertyVariables>
-<!--                    <suiteXmlFiles>-->
-<!--                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;-->
-<!--                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
-<!--                    </suiteXmlFiles>-->
+                    <suiteXmlFiles>
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>
