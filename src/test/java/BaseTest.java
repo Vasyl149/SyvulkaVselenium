@@ -12,12 +12,11 @@ import static config.ConfManager.conf;
 
 public abstract class BaseTest {
     protected static final Logger logger = Logger.getLogger(MainMenuBO.class);
-   // private final String env = "Chrome";
-
+    private final String env = "Chrome";
+   // private  final String env = System.getProperty("env");
     @BeforeMethod
     //  @Parameters("browser")
     public void preCondition() {
-        String env = System.getProperty("env");
         WebDriver driver = new BrowserInstance().createInstance(env);
         DriverManager.setDriver(driver);
 
