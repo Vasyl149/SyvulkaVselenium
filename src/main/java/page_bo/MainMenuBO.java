@@ -54,6 +54,8 @@ public class MainMenuBO extends GeneralBO {
         Reader reader = new Reader();
         Thread.sleep(5000);
         logger.info(reader.readFile().equals(menuListNames));
+        System.out.println(reader.readFile());
+        System.out.println(menuListNames);
         Assert.assertTrue(reader.readFile().equals(menuListNames));
         //
         logger.info("Check if icons are displayed on left menu");
