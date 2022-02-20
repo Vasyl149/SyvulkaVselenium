@@ -21,7 +21,7 @@ public class DraftsPage extends AbstractPageObject {
     @FindBy (xpath = "//input[@name='toFieldInput']")
     private WebElement emailInputField;
 
-    @FindBy (xpath = "//button[contains(text(), 'Написати ще')]")
+    @FindBy (css = "div.sendmsg__ads-ready")
     private WebElement confirmMessage;
 
     @Step
