@@ -1,21 +1,20 @@
 package fileReader;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static config.ConfManager.conf;
 
 public class Reader {
-    FileReader fileReader;
+    BufferedReader fileReader;
     List<String> menuListFile;
 
     public List<String> readFile() {
         try {
-            fileReader = new FileReader(conf().menuListFilePath());
-        } catch (FileNotFoundException e) {
+          //  fileReader = new FileReader(conf().menuListFilePath());
+            fileReader = new BufferedReader(new InputStreamReader(new FileInputStream(conf().menuListFilePath()), "UTF-8"));
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         BufferedReader bufferedReader = new BufferedReader(fileReader);
