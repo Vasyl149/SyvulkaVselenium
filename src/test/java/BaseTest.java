@@ -11,7 +11,7 @@ import static config.ConfigManager.conf;
 
 public abstract class BaseTest {
     protected static final Logger logger = Logger.getLogger(MainMenuBO.class);
-    // private final String env = "Chrome";
+    // private final String browser = "Chrome";
     private final String browser = System.getProperty("environment");
 
     @BeforeMethod

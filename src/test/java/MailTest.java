@@ -21,10 +21,12 @@ public class MailTest extends BaseTest {
         new MainMenuBO().verifyDraftsNumber(newDraftsNumber, draftsNumber);
 
         new MainMenuBO().draftButton().
-                verifySendDraft();
-
-        new MainMenuBO().sentButton().
+                verifySendDraft().
+                sentButton().
                 verifySentMail();
+
+//        new MainMenuBO().sentButton().
+//                verifySentMail();
     }
 
 }
