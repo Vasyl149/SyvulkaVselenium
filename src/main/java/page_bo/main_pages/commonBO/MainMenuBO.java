@@ -33,6 +33,11 @@ public class MainMenuBO extends GeneralBO {
         mainMenuList.sentItemsButton();
         return new SentPageBO();
     }
+    public UnreadPageBO clickUnreadButton() throws InterruptedException {
+        Thread.sleep(3000);
+        mainMenuList.unreadButton();
+        return new UnreadPageBO();
+    }
 
     public void verifyComposeButton() {
         Assert.assertTrue(mainMenuList.getComposeButton().isDisplayed());
@@ -40,17 +45,14 @@ public class MainMenuBO extends GeneralBO {
 
 
     public MainMenuBO verifyInboxIsSelected(){
-        // Check if 'вхідні' tab is selected
         logger.info("Check if 'Inbox' tab is selected");
         Assert.assertTrue(mainMenuList.inboxTab().getAttribute("Class").contains("current"));
         return this;
     }
 
     public MainMenuBO verifyNavigationMenu() throws InterruptedException {
-        // Check if menu list contains 8 items
         logger.info("Check if menu list contains 8 items");
         Assert.assertEquals(mainMenuList.menuList().size(), 8);
-        // Check if menu consist of  'Вхідні', 'Чернетки', 'Надіслані', 'Спам' etc.
         logger.info("Check if menu consist of  'Inbox', 'Drafts', 'Sent', 'Spam' etc.");
         List<String> menuListNames = new ArrayList<>();
 
@@ -58,10 +60,8 @@ public class MainMenuBO extends GeneralBO {
         Reader reader = new Reader();
         Thread.sleep(5000);
         logger.info(reader.readFile().equals(menuListNames));
-        System.out.println(reader.readFile());
-        System.out.println(menuListNames);
         Assert.assertTrue(reader.readFile().equals(menuListNames));
-        //
+
         logger.info("Check if icons are displayed on left menu");
         mainMenuList.iconList().forEach(ic -> Assert.assertTrue(ic.isDisplayed()));
         return this;
@@ -84,9 +84,5 @@ public class MainMenuBO extends GeneralBO {
         return new UnreadPageBO();
     }
 
-    public UnreadPageBO clickUnreadButton() throws InterruptedException {
-        Thread.sleep(3000);
-        mainMenuList.unreadButton();
-        return new UnreadPageBO();
-    }
+
 }

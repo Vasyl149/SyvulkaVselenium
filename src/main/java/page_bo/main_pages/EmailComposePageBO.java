@@ -35,16 +35,8 @@ public class EmailComposePageBO extends MainMenuBO {
         return this;
     }
 
-    public EmailComposePageBO verifyFileAddition(){
+    public EmailComposePageBO addFile(){
         emailComposePage.fileInput();
         return this;
     }
-
-    /*public UnreadPageBO clickUnreadButton() throws InterruptedException {
-        Thread.sleep(3000);
-        mainMenuList.unreadButton();
-        return new UnreadPageBO();
-    }*/
-
-
 }

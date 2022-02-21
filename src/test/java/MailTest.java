@@ -13,7 +13,7 @@ public class MailTest extends BaseTest {
                 createNewMail().
                 verifyStyleEditingElements().
                 verifyFontsInDropdown().
-                verifyFileAddition().
+                addFile().
                 clickUnreadButton();
 
         int newDraftsNumber = new MainMenuBO().getDraftsNumber();
