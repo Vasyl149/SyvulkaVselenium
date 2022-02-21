@@ -3,10 +3,10 @@ import driver.DriverManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.*;
-import page.common.Header;
-import page_bo.loginPageBO.LoginPageBO;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import page_bo.MainMenuBO;
+import page_bo.loginPageBO.LoginPageBO;
 
 import static config.ConfManager.conf;
 
