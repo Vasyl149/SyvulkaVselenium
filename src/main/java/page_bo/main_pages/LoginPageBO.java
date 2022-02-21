@@ -1,7 +1,7 @@
-package page_bo.GeneralBO.loginPageBO;
+package page_bo.main_pages;
 
 import page.login.LoginPage;
-import page_bo.GeneralBO.GeneralBO;
+import page_bo.GeneralBO;
 
 public class LoginPageBO extends GeneralBO {
     LoginPage loginPage = new LoginPage();

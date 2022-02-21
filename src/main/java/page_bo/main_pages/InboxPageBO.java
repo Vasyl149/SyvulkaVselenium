@@ -1,13 +1,15 @@
-package page_bo;
+package page_bo.main_pages;
 
 import org.testng.Assert;
 import page.main.InboxPage;
+import page_bo.GeneralBO;
+import page_bo.main_pages.commonBO.MainMenuBO;
 
 public class InboxPageBO extends MainMenuBO {
     InboxPage inboxPage = new InboxPage();
 
     public int getUnreadLettersNumber(){
-        logger.info("Get unread letters number");
+        GeneralBO.logger.info("Get unread letters number");
         return inboxPage.unreadMailList().size();
     }
 
@@ -15,7 +17,7 @@ public class InboxPageBO extends MainMenuBO {
 
     public InboxPageBO verifyUnreadLettersPresent() throws InterruptedException {
         //Check if there are new emails in the mailbox
-        logger.info("Check if there are new emails in the mailbox");
+        GeneralBO.logger.info("Check if there are new emails in the mailbox");
         Assert.assertTrue(inboxPage.unreadMailList().size() > 0);
         return this;
     }

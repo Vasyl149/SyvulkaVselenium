@@ -1,5 +1,5 @@
 import org.testng.annotations.Test;
-import page_bo.MainMenuBO;
+import page_bo.main_pages.commonBO.MainMenuBO;
 
 
 public class MailTest extends BaseTest {

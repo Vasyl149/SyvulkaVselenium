@@ -4,8 +4,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import page_bo.MainMenuBO;
-import page_bo.GeneralBO.loginPageBO.LoginPageBO;
+import page_bo.main_pages.commonBO.MainMenuBO;
+import page_bo.main_pages.LoginPageBO;
 
 import static config.ConfigManager.conf;
 

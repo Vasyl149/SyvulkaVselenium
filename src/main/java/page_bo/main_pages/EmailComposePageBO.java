@@ -1,7 +1,8 @@
-package page_bo;
+package page_bo.main_pages;
 
 import org.testng.Assert;
 import page.main.EmailComposePage;
+import page_bo.main_pages.commonBO.MainMenuBO;
 
 public class EmailComposePageBO extends MainMenuBO {
     EmailComposePage emailComposePage = new EmailComposePage();
@@ -39,11 +40,11 @@ public class EmailComposePageBO extends MainMenuBO {
         return this;
     }
 
-    public UnreadPageBO clickUnreadButton() throws InterruptedException {
+    /*public UnreadPageBO clickUnreadButton() throws InterruptedException {
         Thread.sleep(3000);
         mainMenuList.unreadButton();
         return new UnreadPageBO();
-    }
+    }*/
 
 
 }

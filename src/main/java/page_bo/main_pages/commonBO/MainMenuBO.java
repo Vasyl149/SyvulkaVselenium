@@ -1,9 +1,13 @@
-package page_bo;
+package page_bo.main_pages.commonBO;
 
 import fileReader.Reader;
 import org.testng.Assert;
 import page.common.MainMenuList;
-import page_bo.GeneralBO.GeneralBO;
+import page_bo.GeneralBO;
+import page_bo.main_pages.DraftsPageBO;
+import page_bo.main_pages.EmailComposePageBO;
+import page_bo.main_pages.SentPageBO;
+import page_bo.main_pages.UnreadPageBO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +81,12 @@ public class MainMenuBO extends GeneralBO {
     public UnreadPageBO verifyDraftsNumber(int newValue, int oldValue){
         logger.info("Verify Drafts number");
         Assert.assertTrue(newValue==(oldValue+1));
+        return new UnreadPageBO();
+    }
+
+    public UnreadPageBO clickUnreadButton() throws InterruptedException {
+        Thread.sleep(3000);
+        mainMenuList.unreadButton();
         return new UnreadPageBO();
     }
 }

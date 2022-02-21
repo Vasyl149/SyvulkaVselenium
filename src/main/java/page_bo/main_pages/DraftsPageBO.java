@@ -1,7 +1,8 @@
-package page_bo;
+package page_bo.main_pages;
 
 import org.testng.Assert;
 import page.main.DraftsPage;
+import page_bo.main_pages.commonBO.MainMenuBO;
 
 public class DraftsPageBO extends MainMenuBO {
     DraftsPage draftsPage = new DraftsPage();

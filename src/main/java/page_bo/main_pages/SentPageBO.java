@@ -1,7 +1,8 @@
-package page_bo;
+package page_bo.main_pages;
 
 import org.testng.Assert;
 import page.main.SentItemsPage;
+import page_bo.main_pages.commonBO.MainMenuBO;
 
 import static config.ConfigManager.conf;
 
