@@ -17,7 +17,6 @@ public class MailTest extends BaseTest {
                 clickUnreadButton();
 
         int newDraftsNumber = new MainMenuBO().getDraftsNumber();
-
         new MainMenuBO().verifyDraftsNumber(newDraftsNumber, draftsNumber);
 
         new MainMenuBO().draftButton().
@@ -25,8 +24,6 @@ public class MailTest extends BaseTest {
                 sentButton().
                 verifySentMail();
 
-//        new MainMenuBO().sentButton().
-//                verifySentMail();
     }
 
 }
