@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import page_bo.main_pages.commonBO.MainMenuBO;
-import page_bo.main_pages.LoginPageBO;
+import page_bo.main_pages.loginPageBO.LoginPageBO;
 
 import static config.ConfigManager.conf;
 

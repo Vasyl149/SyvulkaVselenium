@@ -1,4 +1,4 @@
-package page_bo.main_pages;
+package page_bo.main_pages.loginPageBO;
 
 import page.login.LoginPage;
 import page_bo.GeneralBO;
@@ -12,6 +12,4 @@ public class LoginPageBO extends GeneralBO {
         loginPage.clickContinue();
         logger.info("Click 'Continue' button");
     }
-
-
 }
