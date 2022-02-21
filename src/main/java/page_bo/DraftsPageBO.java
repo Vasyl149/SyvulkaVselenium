@@ -14,7 +14,7 @@ public class DraftsPageBO extends MainMenuBO {
         logger.info("close alert");
         draftsPage.closeAlert();
         logger.info("fill in email field");
-        draftsPage.emailField();
+        draftsPage.fillEmailField();
         Thread.sleep(1000);
         logger.info("click send button");
         draftsPage.sendButton();

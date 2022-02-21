@@ -5,7 +5,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.AbstractPageObject;
-import static config.ConfManager.conf;
+import static config.ConfigManager.conf;
 
 
 import java.util.List;
@@ -46,7 +46,7 @@ public class EmailComposePage extends AbstractPageObject {
     }
 
     @Step
-    public void textArea(){
+    public void switchToTextArea(){
         DriverManager.getDriver().switchTo().frame(textArea);
     }
 
@@ -56,7 +56,7 @@ public class EmailComposePage extends AbstractPageObject {
     }
 
     @Step
-    public void textField(){
+    public void fillTextField(){
         textField.sendKeys(conf().message());
     }
 
@@ -76,7 +76,7 @@ public class EmailComposePage extends AbstractPageObject {
     }
 
     @Step
-    public List<WebElement> fontList(){
+    public List<WebElement> getFontList(){
         return fontList;
     }
 

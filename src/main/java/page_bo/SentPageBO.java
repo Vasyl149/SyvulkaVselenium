@@ -3,7 +3,7 @@ package page_bo;
 import org.testng.Assert;
 import page.main.SentItemsPage;
 
-import static config.ConfManager.conf;
+import static config.ConfigManager.conf;
 
 public class SentPageBO extends MainMenuBO {
     SentItemsPage sentItemsPage = new SentItemsPage();

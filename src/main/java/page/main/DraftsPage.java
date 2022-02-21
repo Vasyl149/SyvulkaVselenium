@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.AbstractPageObject;
 
-import static config.ConfManager.conf;
+import static config.ConfigManager.conf;
 
 public class DraftsPage extends AbstractPageObject {
 
@@ -40,7 +40,7 @@ public class DraftsPage extends AbstractPageObject {
     }
 
     @Step
-    public void emailField(){
+    public void fillEmailField(){
         emailInputField.click();
         emailInputField.sendKeys(conf().testemail());
     }

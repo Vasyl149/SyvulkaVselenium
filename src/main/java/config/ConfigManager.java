@@ -3,9 +3,9 @@ package config;
 
 import org.aeonbits.owner.ConfigCache;
 
-public class ConfManager {
+public class ConfigManager {
 
-    private ConfManager(){
+    private ConfigManager(){
     }
 
     public static Configuration conf(){

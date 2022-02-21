@@ -27,18 +27,4 @@ public class MailTest extends BaseTest {
                 verifySentMail();
     }
 
-
-//    @Test(dependsOnMethods = "newMailWithoutRecipientTest")
-//    public void sendDraftTest() throws InterruptedException {
-//        new MainMenuBO().draftButton().
-//                verifySendDraft();
-//    }
-//
-//
-//    @Test(dependsOnMethods = "sendDraftTest")
-//    public void sentItems() {
-//        new MainMenuBO().sentButton().
-//                verifySentMail();
-//    }
-
 }

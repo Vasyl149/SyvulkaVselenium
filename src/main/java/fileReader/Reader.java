@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static config.ConfManager.conf;
+import static config.ConfigManager.conf;
 
 public class Reader {
     BufferedReader fileReader;

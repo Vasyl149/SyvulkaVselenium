@@ -11,9 +11,9 @@ public class EmailComposePageBO extends MainMenuBO {
         emailComposePage.boldButton();
         emailComposePage.italicButton();
         logger.info("Switch to textarea frame");
-        emailComposePage.textArea();
+        emailComposePage.switchToTextArea();
         logger.info("send text to textarea");
-        emailComposePage.textField();
+        emailComposePage.fillTextField();
         return this;
 
     }
@@ -30,7 +30,7 @@ public class EmailComposePageBO extends MainMenuBO {
         emailComposePage.switchToParentFrame();
         emailComposePage.fontDropdown();
         logger.info("Verify fonts in the dropdown");
-        emailComposePage.fontList().forEach(font -> Assert.assertTrue(font.isDisplayed()));
+        emailComposePage.getFontList().forEach(font -> Assert.assertTrue(font.isDisplayed()));
         return this;
     }
 

@@ -30,8 +30,8 @@ public class MainMenuBO extends GeneralBO {
         return new SentPageBO();
     }
 
-    public boolean getComposeButton() {
-        return mainMenuList.getComposeButton().isDisplayed();
+    public void verifyComposeButton() {
+        Assert.assertTrue(mainMenuList.getComposeButton().isDisplayed());
     }
 
 
@@ -45,12 +45,12 @@ public class MainMenuBO extends GeneralBO {
     public MainMenuBO verifyNavigationMenu() throws InterruptedException {
         // Check if menu list contains 8 items
         logger.info("Check if menu list contains 8 items");
-        Assert.assertEquals(mainMenuList.menuList2().size(), 8);
+        Assert.assertEquals(mainMenuList.menuList().size(), 8);
         // Check if menu consist of  'Вхідні', 'Чернетки', 'Надіслані', 'Спам' etc.
         logger.info("Check if menu consist of  'Inbox', 'Drafts', 'Sent', 'Spam' etc.");
         List<String> menuListNames = new ArrayList<>();
 
-        mainMenuList.menuList2().forEach(el -> menuListNames.add(el.getText()));
+        mainMenuList.menuList().forEach(el -> menuListNames.add(el.getText()));
         Reader reader = new Reader();
         Thread.sleep(5000);
         logger.info(reader.readFile().equals(menuListNames));
@@ -65,13 +65,13 @@ public class MainMenuBO extends GeneralBO {
 
     public MainMenuBO verifyUnreadLettersNumber(int expectedNumber){
         logger.info("Check if message counter is equal to the number of messages");
-        Assert.assertTrue(mainMenuList.counter().equals(String.valueOf(expectedNumber)));
+        Assert.assertTrue(mainMenuList.getCounter().equals(String.valueOf(expectedNumber)));
         return this;
     }
 
     public int getDraftsNumber(){
         logger.info("Get drafts number");
-        return mainMenuList.countOfDrafts();
+        return mainMenuList.getCountOfDrafts();
     }
 
     public UnreadPageBO verifyDraftsNumber(int newValue, int oldValue){

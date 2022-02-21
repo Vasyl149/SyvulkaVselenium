@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.AbstractPageObject;
 
-import static config.ConfManager.conf;
+import static config.ConfigManager.conf;
 
 public class LoginPage extends AbstractPageObject {
     @FindBy(xpath = "//input[@name='login']")

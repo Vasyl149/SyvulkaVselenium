@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.AbstractPageObject;
 
-import static config.ConfManager.conf;
-
 public class SentItemsPage extends AbstractPageObject {
     //@FindBy(css = "[data-email='"+ conf().testemail() +"']")
     @FindBy(css = "[data-email='syvulkav@gmail.com']")

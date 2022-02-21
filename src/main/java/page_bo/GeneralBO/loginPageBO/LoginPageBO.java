@@ -1,23 +1,16 @@
-package page_bo.loginPageBO;
+package page_bo.GeneralBO.loginPageBO;
 
 import page.login.LoginPage;
 import page_bo.GeneralBO.GeneralBO;
-import page_bo.MainMenuBO;
 
 public class LoginPageBO extends GeneralBO {
     LoginPage loginPage = new LoginPage();
 
-    public LoginPageBO logIn() {
-
+    public void logIn(){
         loginPage.setCredentials();
         logger.info("Fill login and password");
-        return this;
-    }
-
-    public MainMenuBO clickContinue(){
         loginPage.clickContinue();
         logger.info("Click 'Continue' button");
-        return new MainMenuBO();
     }
 
 

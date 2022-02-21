@@ -47,7 +47,7 @@ public class MainMenuList extends AbstractPageObject {
     }
 
     @Step
-    public List<WebElement> menuList2(){
+    public List<WebElement> menuList(){
         return menuList;
     }
 
@@ -62,7 +62,7 @@ public class MainMenuList extends AbstractPageObject {
     }
 
     @Step
-    public String counter(){
+    public String getCounter(){
         return counter.getText();
     }
 
@@ -89,7 +89,7 @@ public class MainMenuList extends AbstractPageObject {
     }
 
     @Step
-    public int countOfDrafts(){
+    public int getCountOfDrafts(){
         return Integer.parseInt(countOfDrafts.getText());
 
     }
