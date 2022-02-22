@@ -36,6 +36,7 @@ public class EmailComposePageBO extends MainMenuBO {
     }
 
     public EmailComposePageBO addFile(){
+        logger.info("Add file");
         emailComposePage.fileInput();
         return this;
     }
