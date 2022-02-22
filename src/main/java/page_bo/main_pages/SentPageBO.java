@@ -11,8 +11,6 @@ public class SentPageBO extends MainMenuBO {
 
     public void verifySentMail() throws InterruptedException {
         logger.info("Verify sent mail");
-        Thread.sleep(5000);
-        logger.info(sentItemsPage.getSentItemEmail().equals(conf().testemail()));
         Assert.assertTrue(sentItemsPage.getSentItemEmail().equals(conf().testemail()));
     }
 }
