@@ -22,7 +22,7 @@ public interface Configuration extends Config {
     String message();
 
     @Key("testFilePath")
-    String testfilePath();
+    String testFilePath();
 
     @Key("menuFilePath")
     String menuListFilePath();
