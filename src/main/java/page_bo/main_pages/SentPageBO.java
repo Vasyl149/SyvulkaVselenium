@@ -9,7 +9,7 @@ import static config.ConfigManager.conf;
 public class SentPageBO extends MainMenuBO {
     SentItemsPage sentItemsPage = new SentItemsPage();
 
-    public void verifySentMail() {
+    public void verifySentMail() throws InterruptedException {
         logger.info("Verify sent mail");
         Assert.assertTrue(sentItemsPage.getSentItemEmail().equals(conf().testemail()));
     }
