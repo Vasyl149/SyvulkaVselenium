@@ -21,12 +21,12 @@ public enum MenuListEnum {
         this.value = value;
     }
 
-    public static List<String> getNamesOfItems(){
+    public static List<String> getNamesOfItems() throws UnsupportedEncodingException {
 
 
         List<String> namesOfItems = new ArrayList<>();
         for (MenuListEnum item : MenuListEnum.values()) {
-            namesOfItems.add(item.toString());
+            namesOfItems.add(item.tee());
         }
         return namesOfItems;
     }
@@ -35,9 +35,9 @@ public enum MenuListEnum {
 
     }
 
-    public String tee(){
-        byte[] a = value.getBytes(StandardCharsets.UTF_8);
-        String b = a.toString();
+    public String tee() throws UnsupportedEncodingException {
+        byte[] a = value.getBytes();
+        String b = new String(a, "UTF-8");
         return b;
     }
 

@@ -9,6 +9,7 @@ import page_bo.main_pages.EmailComposePageBO;
 import page_bo.main_pages.SentPageBO;
 import page_bo.main_pages.UnreadPageBO;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 //import java.util.logging.LogManager;
@@ -50,7 +51,7 @@ public class MainMenuBO extends GeneralBO {
         return this;
     }
 
-    public MainMenuBO verifyNavigationMenu() throws InterruptedException {
+    public MainMenuBO verifyNavigationMenu() throws InterruptedException, UnsupportedEncodingException {
         logger.info("Check if menu list contains 8 items");
         Assert.assertEquals(mainMenuList.menuList().size(), 8);
         logger.info("Check if menu consist of  'Inbox', 'Drafts', 'Sent', 'Spam' etc.");
