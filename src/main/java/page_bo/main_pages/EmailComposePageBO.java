@@ -4,6 +4,10 @@ import org.testng.Assert;
 import page.main.EmailComposePage;
 import page_bo.main_pages.commonBO.MainMenuBO;
 
+import java.io.FileNotFoundException;
+
+import static config.ConfigManager.conf;
+
 public class EmailComposePageBO extends MainMenuBO {
     EmailComposePage emailComposePage = new EmailComposePage();
 
@@ -35,7 +39,7 @@ public class EmailComposePageBO extends MainMenuBO {
         return this;
     }
 
-    public EmailComposePageBO addFile(){
+    public EmailComposePageBO addFile() throws FileNotFoundException {
         logger.info("Add file");
         emailComposePage.fileInput();
         return this;

@@ -1,6 +1,6 @@
 package page_bo.main_pages.commonBO;
 
-import fileReader.Reader;
+import enums.MenuListEnum;
 import org.testng.Assert;
 import page.common.MainMenuList;
 import page_bo.GeneralBO;
@@ -57,10 +57,9 @@ public class MainMenuBO extends GeneralBO {
         List<String> menuListNames = new ArrayList<>();
 
         mainMenuList.menuList().forEach(el -> menuListNames.add(el.getText()));
-        Reader reader = new Reader();
+
         Thread.sleep(5000);
-        logger.info(reader.readFile().equals(menuListNames));
-        Assert.assertTrue(reader.readFile().equals(menuListNames));
+        Assert.assertTrue(MenuListEnum.getNamesOfItems().equals(menuListNames));
 
         logger.info("Check if icons are displayed on left menu");
         mainMenuList.iconList().forEach(ic -> Assert.assertTrue(ic.isDisplayed()));

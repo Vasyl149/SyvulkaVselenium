@@ -8,6 +8,8 @@ import page.AbstractPageObject;
 import static config.ConfigManager.conf;
 
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.List;
 
 public class EmailComposePage extends AbstractPageObject {
@@ -80,7 +82,7 @@ public class EmailComposePage extends AbstractPageObject {
         return fontList;
     }
 
-    public void fileInput(){
+    public void fileInput() throws FileNotFoundException {
        fileInput.sendKeys(conf().testFilePath());
     }
 }

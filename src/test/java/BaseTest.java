@@ -12,11 +12,11 @@ import static config.ConfigManager.conf;
 
 public abstract class BaseTest {
     protected static final Logger logger = Logger.getLogger(MainMenuBO.class);
-     private final String browser = "Edge";
-    //private final String browser = System.getProperty("environment");
+    //private final String browser = "Edge";
+    private final String browser = System.getProperty("environment");
 
     @BeforeMethod
-    @Parameters("browser")
+    //@Parameters("browser")
     public void preCondition() {
         WebDriver driver = new BrowserInstance().createInstance(browser);
         DriverManager.setDriver(driver);
