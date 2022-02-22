@@ -2,11 +2,11 @@
 <suite name="browser test" verbose="1" thread-count="99">
     
     <test name="Test1">
-<!--        <parameter name="browser" value="chrome">-->
+        <parameter name="browser" value="chrome">
             <classes>
-                <class name="LeftMenuTest"/>
+<!--                <class name="LeftMenuTest"/>-->
                 <class name="MailTest"/>
             </classes>
-<!--        </parameter>-->
+        </parameter>
     </test>
 </suite>
