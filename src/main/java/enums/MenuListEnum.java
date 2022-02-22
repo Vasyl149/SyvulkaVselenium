@@ -26,7 +26,7 @@ public enum MenuListEnum {
 
         List<String> namesOfItems = new ArrayList<>();
         for (MenuListEnum item : MenuListEnum.values()) {
-            namesOfItems.add(item.tee());
+            namesOfItems.add(item.toString());
         }
         return namesOfItems;
     }
