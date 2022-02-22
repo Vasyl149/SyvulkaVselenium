@@ -81,7 +81,6 @@ public class EmailComposePage extends AbstractPageObject {
     }
 
     public void fileInput(){
-       // fileInput.sendKeys(conf().testFilePath());
-        fileInput.sendKeys(conf().menuListFilePath());
+       fileInput.sendKeys(conf().testFilePath());
     }
 }
