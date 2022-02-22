@@ -37,7 +37,7 @@ public enum MenuListEnum {
 
     public String tee(){
         byte[] a = value.getBytes(StandardCharsets.UTF_8);
-        String b = new String(a);
+        String b = a.toString();
         return b;
     }
 
