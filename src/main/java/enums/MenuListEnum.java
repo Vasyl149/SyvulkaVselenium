@@ -1,7 +1,6 @@
 package enums;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +10,7 @@ public enum MenuListEnum {
     SENT("Надіслані"),
     SPAM("Спам"),
     TRASH("Видалені"),
-    UNDREAD("Непрочитані"),
+    UNREAD("Непрочитані"),
     MARKED("Відмічені"),
     FILES("Вкладення");
 
@@ -23,22 +22,17 @@ public enum MenuListEnum {
 
     public static List<String> getNamesOfItems() throws UnsupportedEncodingException {
 
-
         List<String> namesOfItems = new ArrayList<>();
         for (MenuListEnum item : MenuListEnum.values()) {
-            namesOfItems.add(item.tee());
+            namesOfItems.add(item.toUTF8());
         }
         return namesOfItems;
     }
 
-    public static void qt() throws FileNotFoundException, UnsupportedEncodingException {
-
-    }
-
-    public String tee() throws UnsupportedEncodingException {
-        byte[] a = value.getBytes();
-        String b = new String(a, "UTF-8");
-        return b;
+    public String toUTF8() throws UnsupportedEncodingException {
+        byte[] _byte = value.getBytes();
+        String str = new String(_byte, "UTF-8");
+        return str;
     }
 
 

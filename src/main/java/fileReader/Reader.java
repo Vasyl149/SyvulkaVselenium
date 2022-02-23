@@ -6,7 +6,9 @@ import java.util.stream.Collectors;
 
 import static config.ConfigManager.conf;
 
-// isn't used, should be removed
+// Reader isn't used, should be removed
+
+
 public class Reader {
     BufferedReader fileReader;
     List<String> menuListFile;
