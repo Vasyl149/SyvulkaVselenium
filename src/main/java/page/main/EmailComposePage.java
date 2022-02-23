@@ -5,12 +5,11 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import page.AbstractPageObject;
-import static config.ConfigManager.conf;
-
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.List;
+
+import static config.ConfigManager.conf;
 
 public class EmailComposePage extends AbstractPageObject {
 

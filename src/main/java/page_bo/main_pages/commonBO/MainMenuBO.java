@@ -12,8 +12,6 @@ import page_bo.main_pages.UnreadPageBO;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
-//import java.util.logging.LogManager;
-//import java.util.logging.Logger;
 
 public class MainMenuBO extends GeneralBO {
 
